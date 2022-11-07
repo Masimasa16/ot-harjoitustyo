@@ -1,0 +1,115 @@
+~/ot_viikko1$ git log --stat | cat
+commit a800cd3e5f59cc76fde2fe085f398d91ff3ac358
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:58:31 2022 +0200
+
+    Poistetiin tiodosto file1 ja muunnettiin tiedoston nimeä file2 -> file22
+
+ file2           | 0
+ file1 => file22 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1fa1f49d2948e0364b75492185056d4f0fe05fe1
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:54:01 2022 +0200
+
+    Lisättiin tiedostot file1, file2 ja file3
+
+ file1 | 0
+ file2 | 0
+ file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 014d5dcb5225acaf1349e43853dd236205ce877c
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:43:08 2022 +0200
+
+    Muunoksia tiedostoihin eka.txt ja kolmas.txt
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 5f3a1894a6d713b447538ed4a8b74d8e5d064db7
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:40:06 2022 +0200
+
+    Muunnetiin tiedoston nimi tiedosto.txt -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 64cad36c1e0a665bad2690f5f2a09b63c4408507
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:37:16 2022 +0200
+
+    Poistetiin tiedosto toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 6739975905a871a8e753047cfd63aee03ded66d7
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:34:16 2022 +0200
+
+    Muunoksia tiedostoon tiedosto.txt
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 512bd94158e6e4cb86322edfac319d3e9edbd413
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:32:50 2022 +0200
+
+    Lisätiin tiedosto.txt paljon tekstiä.
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1c4a2cd323c20a08bb9e4a6411b0ee562a5529cc
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:28:05 2022 +0200
+
+    Lisättiin tiedosto stuff.txt hakemistoon stuff.
+
+ stuff/stuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0a25a27080972380279a550bc98d1332169c35d8
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:24:27 2022 +0200
+
+    Muunoksi toiseen ja kolmateen *txt tiedostoihin.
+
+ kolmas.txt | 2 +-
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 1b1173373bf8aad30a9045d991a8c6061a1d2981
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:21:01 2022 +0200
+
+    kolmas *.txt tiedosto
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8712ecda650830ec2e1743515d1ffaeef62d6465
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:17:31 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 05e25ade2e8747cb137714ca411205d7cd05d898
+Author: Joonatan <j.joonatan.mustonen@gmail.com>
+Date:   Mon Nov 7 22:14:47 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
