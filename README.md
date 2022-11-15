@@ -9,3 +9,6 @@
 
 ## Vaatimusmäärittely
 [vaatimusmaarittely.md](documentaatio/vaatimusmaarittely.md)
+
+## Tuntikirjanpito
+[tuntikirjanpito.md](documentaatio/tuntikirjanpito.md)
