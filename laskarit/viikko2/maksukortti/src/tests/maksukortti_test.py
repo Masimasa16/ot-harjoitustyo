@@ -23,3 +23,13 @@ class TestMaksukortti(unittest.TestCase):
         kortti.syo_edullisesti()
 
         self.assertEqual(str(kortti), "Kortilla on rahaa 2.00 euroa")
+
+    def test_kortille_voi_ladata_rahaa(self):
+        self.kortti.lataa_rahaa(2500)
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 35.00 euroa")
+
+    def test_kortin_saldo_ei_ylita_maksimiarvoa(self):
+        self.kortti.lataa_rahaa(20000)
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 150.00 euroa")
