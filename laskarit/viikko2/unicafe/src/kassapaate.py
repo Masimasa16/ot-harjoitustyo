@@ -42,3 +42,24 @@ class Kassapaate:
             self.kassassa_rahaa += summa
         else:
             return
+    
+    def kassanraha_euroina(self):
+        eurot = self.kassassa_rahaa//100
+        sentit = self.kassassa_rahaa - eurot*100
+        return {
+            'eurot': eurot,
+            'sentit': sentit
+        }
+
+def kassapaate_data(kassapaate:Kassapaate):
+    kassanraha = kassapaate.kassanraha_euroina()
+    eurot = kassanraha['eurot']
+    sentit = kassanraha['sentit']
+    eudulliset = kassapaate.edulliset
+    maukaat = kassapaate.maukkaat
+    return {
+        'eurot':  eurot,
+        'sentit': sentit,
+        'edulliset': eudulliset,
+        'maukaat': maukaat
+    }
