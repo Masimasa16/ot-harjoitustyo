@@ -3,17 +3,23 @@ from maksukortti import Maksukortti
 
 class TestMaksukortti(unittest.TestCase):
     def setUp(self):
-        print("Set up goes here")
+        self.kortti = Maksukortti(1000)
 
     def test_konstruktori_asettaa_saldon_oikein(self):
-        kortti = Maksukortti(1000)
-
-        self.assertEqual(str(kortti), "Kortilla on rahaa 10.00 euroa")
-
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 10.00 euroa")
 
     def test_syo_edullisesti_vahentaa_saldoa_oikein(self):
-        kortti = Maksukortti(1000)
+        self.kortti.syo_edullisesti()
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 7.50 euroa")
+
+    def test_syo_maukkaasti_vahentaa_saldoa_oikein(self):
+        self.kortti.syo_maukkaasti()
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 6.00 euroa")
+
+    def test_syo_edullisesti_ei_vie_saldoa_negatiiviseksi(self):
+        kortti = Maksukortti(200)
         kortti.syo_edullisesti()
 
-        self.assertEqual(str(kortti), "Kortilla on rahaa 7.50 euroa")
-
+        self.assertEqual(str(kortti), "Kortilla on rahaa 2.00 euroa")
