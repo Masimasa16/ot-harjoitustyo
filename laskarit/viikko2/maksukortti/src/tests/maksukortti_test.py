@@ -18,12 +18,6 @@ class TestMaksukortti(unittest.TestCase):
 
         self.assertEqual(str(self.kortti), "Kortilla on rahaa 6.00 euroa")
 
-    def test_syo_edullisesti_ei_vie_saldoa_negatiiviseksi(self):
-        kortti = Maksukortti(200)
-        kortti.syo_edullisesti()
-
-        self.assertEqual(str(kortti), "Kortilla on rahaa 2.00 euroa")
-
     def test_kortille_voi_ladata_rahaa(self):
         self.kortti.lataa_rahaa(2500)
 
@@ -33,3 +27,21 @@ class TestMaksukortti(unittest.TestCase):
         self.kortti.lataa_rahaa(20000)
 
         self.assertEqual(str(self.kortti), "Kortilla on rahaa 150.00 euroa")
+
+    def test_syo_tasarahalla(self):
+        edulinen_kortti = Maksukortti(250)
+        maukas_kortti = Maksukortti(400)
+
+        edulinen_kortti.syo_edullisesti()
+        maukas_kortti.syo_maukkaasti()
+
+        self.assertListEqual([edulinen_kortti, maukas_kortti], [Maksukortti(0), Maksukortti(0)])
+
+    def test_syo_ei_vie_saldoa_negatiiviseksi(self):
+        edulinen_kortti = Maksukortti(200)
+        maukas_kortti = Maksukortti(300)
+
+        edulinen_kortti.syo_edullisesti()
+        maukas_kortti.syo_maukkaasti()
+
+        self.assertListEqual([edulinen_kortti, maukas_kortti], [Maksukortti(200), Maksukortti(300)])
