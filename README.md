@@ -1,17 +1,30 @@
 # Ohjelmomistotekniikka, harjoitustyö
-## Tehtävät
-### Viikko 1
-[komentorivi.txt](/laskarit/viikko1/komentorivi.txt) 
 
-### Viikko2
-![testikattavuus](laskarit/viikko2/laskarit_viikko2.png)
+## Dokumentaatio
 
-### Viikko3
-[ratkaisut.md](/laskarit/viikko3/ratkaisut.md)
+[Vaatimusmaarittely](documentaatio/vaatimusmaarittely.md)
+
+[Tuntikirjanpito](documentaatio/tuntikirjanpito.md)
+
+[Changelog](documentaatio/changelog.md)
+
+## Asennus
+
+Asenna riippuvuudet komennolla:
+
+    - poetry install
 
 
-## Vaatimusmäärittely
-[vaatimusmaarittely.md](documentaatio/vaatimusmaarittely.md)
+## Komentorivitoiminnot
 
-## Tuntikirjanpito
-[tuntikirjanpito.md](documentaatio/tuntikirjanpito.md)
+### Käynistäminen
+
+    poetry run invoke start
+
+### Testaus
+
+    poetry run invoke test
+
+### Testikattavuus
+
+    poetry run invoke coverage-report
