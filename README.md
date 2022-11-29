@@ -4,6 +4,8 @@
 
 [Vaatimusmaarittely](documentaatio/vaatimusmaarittely.md)
 
+[Arkkitehtuurikuvaus](documentaatio/arkkitehtuuri.md)
+
 [Tuntikirjanpito](documentaatio/tuntikirjanpito.md)
 
 [Changelog](documentaatio/changelog.md)
@@ -28,3 +30,7 @@ Asenna riippuvuudet komennolla:
 ### Testikattavuus
 
     poetry run invoke coverage-report
+
+### Pylint
+
+    poetry run invoke lint
