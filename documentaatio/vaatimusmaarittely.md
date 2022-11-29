@@ -16,7 +16,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä.
 - Pystyy aloitaamaan pelin kartan rakentamisesta
 
 ### Pelissä
-- Pelaamaan lautapeliä batlle sheep
+- Pelaamaan lautapeliä batlle sheep "(Ensinmäinen osa tehty)"
 
 ## Jatkokehitysideoita
 
