@@ -54,7 +54,6 @@ class Hex(Polygon):
         return False
 
     def place(self, grid):
-        print(self.moves)
         grid[self.moves[0]][self.moves[1]][self.moves[2]] = 1
 
 
