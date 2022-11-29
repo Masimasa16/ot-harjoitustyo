@@ -5,7 +5,7 @@ HEX_MOVE_VECTORS = np.array([
     [np.cos(np.radians(30*i)), np.sin(np.radians(30*i))] for i in range(12)
 ])
 
-MOVES = [
+MOVES = np.array([
     [1, 0, 0],
     [1, 0, 0],
     [0, 1, 0],
@@ -19,7 +19,7 @@ MOVES = [
     [0, 0, -1],
     [0, 0, -1]
 
-]
+])
 
 
 class Hex(Polygon):
@@ -36,7 +36,7 @@ class Hex(Polygon):
 
         self.points_dist_center = points_dist_center
 
-        self.moves = [0, 0, 0]
+        self.moves = np.array([0, 0, 0])
 
         self.valid_indexes = [0, 2, 4, 6, 8, 10]
 
@@ -54,6 +54,7 @@ class Hex(Polygon):
         return False
 
     def place(self, grid):
+        print(self.moves)
         grid[self.moves[0]][self.moves[1]][self.moves[2]] = 1
 
 
@@ -78,12 +79,12 @@ class Tile:
         for hexagon in self.hexes:
             hexagon.rotate(theta)
 
+    def test_cordinates(self, grid):
+        return all(hexagon.check_cordinates(grid) for hexagon in self.hexes)
+
     def place(self, grid):
-        if all(hexagon.check_cordinates(grid) for hexagon in self.hexes):
-            for hexagon in self.hexes:
-                hexagon.place(grid)
-            return True
-        return False
+        for hexagon in self.hexes:
+            hexagon.place(grid)
 
     def point_in_tile(self, point):
         if any(hexagon.point_in_polygon(point) for hexagon in self.hexes):

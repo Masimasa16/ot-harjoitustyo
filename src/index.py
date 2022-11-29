@@ -88,11 +88,16 @@ def main():
                     tile.rotate(-60)
 
                 if event.key == pygame.K_SPACE:
-                    pass
+                    if tile.test_cordinates((GRID)):
+                        tile.place(GRID)
+                        for hexagon in tile.hexes:
+                            draw_polygon(screen, GREEN, RED, hexagon.points)
+                        tile = Tile(HEX_DIST_FROM_CENTER)
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 for arrow in arrows:
-                    arrow.click([mouse_pos_x - CENTER_POS[0], mouse_pos_y - CENTER_POS[1]], tile)
+                    arrow.click([mouse_pos_x - CENTER_POS[0],
+                                mouse_pos_y - CENTER_POS[1]], tile)
 
         for hexagon in tile.hexes:
             draw_polygon(screen, GREEN, RED, hexagon.points)
